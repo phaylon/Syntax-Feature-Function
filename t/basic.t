@@ -22,14 +22,14 @@ is do {
 #
 #   import with simply identifier list argument
 #
-is do {
-    package TestSimplyNamedImport;
-    use syntax function => [qw( f fun )];
-
-    fun double ($f) { $f->() * 3 }
-
-    double(f { 13 });
-}, 39, 'simply renamed import';
+#is do {
+#    package TestSimplyNamedImport;
+#    use syntax function => [qw( f fun )];
+#
+#    fun double ($f) { $f->() * 3 }
+#
+#    double(f { 13 });
+#}, 39, 'simply renamed import';
 
 #
 #   option map with single name

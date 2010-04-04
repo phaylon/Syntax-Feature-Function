@@ -51,12 +51,6 @@ sub install {
             }
         }
 
-        # function => [qw( fun f )]
-        elsif ($options_ref eq 'ARRAY') {
-
-            @names = @$options;
-        }
-
         # bad options type
         else {
 
@@ -132,15 +126,6 @@ for anonymous functions.
 
 This usage will provide you with B<both> keywords: C<f> and C<fun>. They will
 both work the same way.
-
-If you want it a bit shorter, you can also say
-
-    use syntax function => [qw( f fun )];
-
-to achieve the same effect. Of course, you can use this also to use a different
-single keyword:
-
-    use syntax function => ['f'];
 
 =head1 SEE ALSO
 
