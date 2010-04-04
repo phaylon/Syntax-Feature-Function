@@ -81,9 +81,6 @@ requesting package.
 
 =head1 SYNOPSIS
 
-    use strict;
-    use warnings;
-
     package Foo;
     use syntax 'function';
 
