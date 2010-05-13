@@ -7,6 +7,7 @@ package Syntax::Feature::Function;
 
 use Carp                    qw( croak );
 use Function::Parameters    ();
+use B::Hooks::EndOfScope;
 
 use namespace::clean;
 
@@ -66,6 +67,10 @@ sub install {
     # install handlers
     Function::Parameters::import_into $target, $_
         for @names;
+
+    on_scope_end {
+        namespace::clean->clean_subroutines($target, @names);
+    };
 
     return 1;
 }
