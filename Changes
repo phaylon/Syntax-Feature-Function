@@ -1,5 +1,6 @@
 
 {{$NEXT}}
+    - Fixed dist.ini to contain correct MetaRequires.
 
 0.001     2010-08-10 00:04:44 Europe/Berlin
     - Initial release.
